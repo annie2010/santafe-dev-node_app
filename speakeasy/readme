@@ -1,4 +1,3 @@
-
 1) in speakeasy dir, do
 $ cd ..
 $ npm install speakeasy
@@ -6,3 +5,32 @@ $ npm install speakeasy
 2) ref
 https://www.npmjs.org/package/speakeasy
 
+3) npm, https://www.npmjs.org/search?q=HOTP
+
+passport-hotpp, 
+HOTP authentication strategy for Passport.
+
+otplib,
+HMAC-based (HOTP) and Time-based (TOTP) One-Time Password library
+
+speakeasy,
+Easy two-factor authentication with node.js. Time-based or counter-based (HOTP/TOTP), and supports the Google Authenticator mobile app. Also includes a key generator. Uses the HMAC One-Time Password algorithms.
+
+onceler
+OTP (One Time Password) facilities for node.
+
+otp
+OTP utility for Google Authenticator
+
+notp (good)
+Node One Time Password library, supports HOTP, TOTP and works with Google Authenticator
+
+otp-key
+Generate random base32 key for two-factor auth
+
+passport-totp
+TOTP authentication strategy for Passport
+
+
+token by mixu
+HMAC token generation and verification with time-based limitation on validity
