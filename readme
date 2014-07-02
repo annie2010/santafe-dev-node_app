@@ -1,0 +1,21 @@
+1) on github
+create a new repo
+
+2)on santafe, in dir node-app, 
+follow instructions to init a repo
+
+https://github.com/annie2010/santafe-dev-node_app
+
+2.a) Create a new repository on the command line
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/annie2010/santafe-dev-node_app.git
+git push -u origin master
+
+2.b) Push an existing repository from the command line
+
+git remote add origin https://github.com/annie2010/santafe-dev-node_app.git
+git push -u origin master
