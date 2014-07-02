@@ -1,0 +1,14 @@
+
+1) git clone repo
+
+$ cd repo_speakeasy
+$ git clone https://github.com/markbao/speakeasy
+
+2) run test
+
+$ cd speakeasy
+
+$ npm install
+$ sudo apt-get install node-vows
+
+$ vows --spec test/*
