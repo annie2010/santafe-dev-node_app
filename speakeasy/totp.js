@@ -28,6 +28,17 @@ b2=speakeasy.totp({key: 'secret', step: 60});
 console.log("b1 <%s>, b2 <%s>",b1, b2)
 assert.equal(b1,b2)
 
+c1=speakeasy.totp({key: 'python', step: 30});
+c2=speakeasy.totp({key: 'python', step: 30});
+console.log("c1 <%s>, c2 <%s>",c1, c2)
+assert.equal(c1,c2)
+
+c1=speakeasy.totp({key: 'python', step: 60});
+c2=speakeasy.totp({key: 'python', step: 60});
+console.log("c1 <%s>, c2 <%s>",c1, c2)
+assert.equal(c1,c2)
+
+
 d='\n1. Test normal operation with key = \'12345678901234567890\' at time = 59'
 console.log(d)
 c=speakeasy.totp({key: '12345678901234567890', time: 59});
