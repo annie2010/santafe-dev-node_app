@@ -11,6 +11,7 @@ def test_hotp():
   #print dir(auth) 
   print "completed successfully"
 
+
 def test_totp():
   print "\n1.b test totp"
   auth = OtpAuth('python')
@@ -21,36 +22,67 @@ def test_totp():
   print auth.secret
   print "completed successfully"
 
-def test_to_google_totp():
-  print "\n2. test to google totp"
-  auth = OtpAuth('python')
-  expect = 'otpauth://totp/python?secret=OB4XI2DPNY&issuer=python'
-  #assert auth.to_google('totp', 'python', 'python') == expect
+
+def test_to_google_totp(f_provider,f_authKey):
+  print "\n2.a test to google totp"
+  auth   = OtpAuth('python')
+  expect = 'otpauth://totp/python?secret='+f_authKey+'&issuer=' + f_provider
+  assert auth.to_google('totp', 'python', 'python') == expect
+  print "secret <%s> to_uri <%s>" % (auth.secret, expect)
+  #print dir(auth) 
+  print "completed successfully"
+
+
+def test_to_uri_totp(f_provider,f_authKey):
+  print "\n2.b test to uri totp"
+  auth   = OtpAuth('python')
+  expect = 'otpauth://totp/'+f_provider+'?secret='+f_authKey+'&issuer=' + f_provider
   assert auth.to_uri('totp', 'python', 'python') == expect
   print "secret <%s> to_uri <%s>" % (auth.secret, expect)
   #print dir(auth) 
   print "completed successfully"
 
-def test_to_google_hotp():
-  print "\n3. test to google hotp"
+
+def test_to_google_hotp(f_provider,f_authKey):
+  print "\n3.a test to google hotp"
+  auth   = OtpAuth('python')
+  expect = 'otpauth://hotp/'+f_provider+'?secret=' + f_authKey + '&issuer='+f_provider+'&counter=4'
+  assert auth.to_google('hotp', 'python', 'python', 4) == expect
+  print "secret <%s> to_uri <%s>" % (auth.secret, expect)
+  #print dir(auth) 
+  print "completed successfully"
+
+def test_to_uri_hotp(f_provider,f_authKey):
+  print "\n3.b test to google hotp"
   auth = OtpAuth('python')
-  expect     = 'otpauth://hotp/python?secret=OB4XI2DPNY&issuer=python&counter=4'
-  #assert auth.to_google('hotp', 'python', 'python', 4) == expect
+  expect     = 'otpauth://hotp/'+f_provider+'?secret=' + f_authKey + '&issuer='+f_provider+'&counter=4'
   assert auth.to_uri('hotp', 'python', 'python', 4)    == expect
   print "secret <%s> to_uri <%s>" % (auth.secret, expect)
   #print dir(auth) 
   print "completed successfully"
 
+
+
 test_hotp()
 test_totp()
-test_to_google_totp()
-test_to_google_hotp()
+test_to_google_totp('python','OB4XI2DPNY')
+test_to_uri_totp('python','OB4XI2DPNY')
+test_to_google_hotp('python','OB4XI2DPNY')
+test_to_uri_hotp('python','OB4XI2DPNY')
 
 #
 # google-authenticator, Two-step verification
 #
 # https://code.google.com/p/google-authenticator/wiki/KeyUriFormat
-#
+## KeyUriFormat  
+## The format of URIs containing encoded keys 
+## Featured, Phase-Implementation
+##
+## otpauth://TYPE/LABEL?PARAMETERS
+##
+## Provision a TOTP key for user "alice@google.com", to use with a service provided by Example, Inc:
+## otpauth://totp/Example:alice@google.com?secret=JBSWY3DPEHPK3PXP&issuer=Example#
+
 ###########################
 # 
 # https://github.com/lepture/otpauth/blob/master/test_otpauth.py
