@@ -1,0 +1,12 @@
+1) secret for totp
+generate a secret
+
+http://rumkin.com/tools/password/pass_gen.php
+
+select: Num + ALPHA
+
+2) passwd generatpor
+
+http://randomkeygen.com
+
+see section, 64-bit WEP Keys
