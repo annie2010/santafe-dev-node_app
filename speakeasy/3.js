@@ -10,6 +10,7 @@ assert = require('assert')
 util = require('util')
 
 secret = 'Q7897UMBNVAEY6KV31LJ651YCYHUC1S1J36XTM2D92EEDSXB9ZF3MTS17F7I9PB0'
+
 c1=speakeasy.totp({key: secret, length:6, encoding:'ascii', step: 30});
 c2=speakeasy.totp({key: secret});
 console.log("totp with step=30, c1 <%s>, c2 <%s>",c1, c2)
