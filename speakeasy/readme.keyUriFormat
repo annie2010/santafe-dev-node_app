@@ -1,0 +1,32 @@
+recap
+
+
+A) KeyUriFormat
+
+1) format
+otpauth://TYPE/LABEL?PARAMETERS
+
+2) exmaple
+
+Provision a TOTP key for user "alice@google.com", to use with a service provided by Example, Inc:
+
+otpauth://totp/Example:alice@google.com?secret=JBSWY3DPEHPK3PXP&issuer=Example
+
+This Base32 encoded key "JBSWY3DPEHPK3PXP" has the value:
+
+byte[] key = { 'H', 'e', 'l', 'l', 'o', '!', (byte) 0xDE, (byte) 0xAD, (byte) 0xBE, (byte) 0xEF };
+
+3) ref
+https://code.google.com/p/google-authenticator/wiki/KeyUriFormat
+
+B) implementation
+
+1) in node, speakeasy
+2) in python,
+
+C) key generator
+
+1) password generator, http://rumkin.com/tools/password/pass_gen.php
+(length=64)
+
+2) random key generator, http://randomkeygen.com
