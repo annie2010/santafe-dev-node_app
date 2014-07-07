@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+process.on('exit', function(f_code){console.log('EXIT <%s>',f_code)});
+process.on('uncaughtException', function(f_err){console.log('EXIT uncaughtException <%s>',f_err);process.exit(1)});
+
 console.log("===Begin")
 
 path=require('path')
@@ -16,7 +19,7 @@ console.log("dirname <%s>",path.dirname(fname))
 console.log("basnename <%s>",path.basename(fname))
 console.log("extname <%s>",path.extname(fname))
 
-
+//throw('SanJose')
 console.log("\n===Compleeted Successfully")
 
 /** runtime
