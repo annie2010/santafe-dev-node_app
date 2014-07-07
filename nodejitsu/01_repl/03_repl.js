@@ -34,6 +34,16 @@ net.createServer(function (socket) {
 }).listen(5001); // TCP socket
 
 
+/** ref
+node api
+- repl module, http://nodejs.org/api/repl.html
+
+socat
+- http://stuff.mit.edu/afs/sipb/machine/penguin-lust/src/socat-1.7.1.2/EXAMPLES
+
+nodejitsu
+- http://docs.nodejitsu.com/articles/REPL/how-to-create-a-custom-repl
+**/
 /** recap
 
 1) local repl
