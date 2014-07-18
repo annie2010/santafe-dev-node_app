@@ -1,8 +1,9 @@
 riak from basho
 (5 minute installation)
 
-1) install 1 node on local and start the node, pre-install dependencies and  erlang
-2) install riak and start 5 nodes, pre-install Rebar 
+1a) install dependencies and  erlang
+1b) install 1 node on local and start the node
+2) build riak and start 5 nodes, pre-install Rebar 
 3) join and leave cluster
 4) multisite
 
