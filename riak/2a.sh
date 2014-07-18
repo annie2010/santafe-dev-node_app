@@ -1,3 +1,7 @@
+#
+# build riak for multi nodes
+# 
+
 # download riak source and build
 wget http://s3.amazonaws.com/downloads.basho.com/riak/1.4/1.4.10/riak-1.4.10.tar.gz
 # http://docs.basho.com/riak/latest/downloads/
