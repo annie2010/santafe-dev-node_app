@@ -3,9 +3,19 @@ riak from basho
 
 1a) install dependencies and  erlang
 1b) install 1 node on local and start the node
-2) build riak and start 5 nodes, pre-install Rebar 
-3) join and leave cluster
-4) multisite
 
+2a) build riak and start 5 nodes, pre-install Rebar 
+2b) join and leave cluster
+2c) multisite
+
+3) python client
+4) put/fetch props
+5) put/fetch an image
+
+1-2) installation
 http://docs.basho.com/riak/latest/quickstart/#Start-Up-Five-Nodes
+
+3) client
+http://docs.basho.com/riak/latest/dev/taste-of-riak/python/
+
 
